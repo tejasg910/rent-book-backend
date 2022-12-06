@@ -115,7 +115,7 @@ app.use('/api', require('./userApi/signup'))
 app.use('/api', require('./userApi/signin'))
 app.use('/api', require('./admin/check'))
 app.use('/api', require('./admin/adminlogin'))
-app.use('/api', require('./payment/razorpay'))
+
 
 
 
