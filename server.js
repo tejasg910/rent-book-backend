@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 const mongoose = require('mongoose');
-const Razorpay = require('razorpay')
+
 const dotenv = require('dotenv')
 const jwt = require('jsonwebtoken')
 dotenv.config()
