@@ -11,13 +11,21 @@ dotenv.config()
 
 const signUp = require('./userApi/signup.js')
 const port  =process.env.PORT ||  5000;
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:3000", 
+}))
 try {
 
-// mongoose.connect('mongodb://localhost:27017/bookabook');
-mongoose.connect("mongodb+srv://vercel-admin-user:bX3uM28wdUdXKgC8@cluster0.ytbgztf.mongodb.net/?retryWrites=true&w=majority");
+    //https://rent-book-backend.vercel.app/   backend host url
 
-console.log('connected mongo')
+// mongoose.connect('mongodb://localhost:27017/bookabook');
+mongoose.connect("mongodb+srv://vercel-admin-user:bX3uM28wdUdXKgC8@cluster0.ytbgztf.mongodb.net/bookabook?retryWrites=true&w=majority").then(()=>{
+
+    console.log('connected mongo')
+}).catch((error)=>{
+    console.log(error)
+});
+
     
 } catch (error) {
     console.log(error)
