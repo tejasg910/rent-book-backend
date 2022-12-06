@@ -3,7 +3,6 @@ const Book = require('./model/Book')
 const express = require('express');
 const app = express();
 const cors = require('cors')
-const request = require('request');
 const mongoose = require('mongoose');
 const Razorpay = require('razorpay')
 const dotenv = require('dotenv')
