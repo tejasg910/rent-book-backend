@@ -12,7 +12,7 @@ dotenv.config()
 const signUp = require('./userApi/signup.js')
 const port  =process.env.PORT ||  5000;
 app.use(cors({
-    origin: "http://localhost:3000", 
+    origin: "https://bookabook.netlify.app", 
 }))
 try {
 
